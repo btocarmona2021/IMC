@@ -1,0 +1,107 @@
+body {
+    background: url("../img/background.jpg") bottom;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+:root{
+    --color: black;
+    --font:white;
+}
+.contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 800px;
+    height: 300px;
+    background-color: #1d3030;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 3px 2px darkgreen;
+
+}
+
+span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #cccccc;
+}
+
+.contenedor div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+.range {
+    accent-color: darkgreen;
+    width: 500px;
+}
+
+#resultado {
+    font-size: 1.8rem;
+    color: #67b4b4;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    padding: 20px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.estado::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 20%;
+    width: 40px;
+    height: 40px;
+    transform: rotate(72deg);
+    background-color: var(--color);
+    z-index: -1;
+    transition: 0.5s;
+    transition-delay: 0.3s;
+}
+
+.estado {
+    position: absolute;
+    display: flex;
+    top: -50px;
+    left: 640px;
+    width: 200px;
+    height: 140px;
+    background-color: var(--color);
+    padding: 30px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 30px 1px rgba(255, 255, 255, 0.76);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transform: scale(0);
+    transition-delay: 0.3s;
+    color: var(--font);
+    text-shadow: 1px 1px 4px black;
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.active {
+    transform: scale(1);
+    opacity: 1;
+}

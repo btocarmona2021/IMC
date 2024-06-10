@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script defer src="./js/imc.js"></script>
+    <title>Calculadora IMC</title>
+</head>
+<body>
+<div class="contenedor">
+    <h1 id="resultado"></h1>
+    <p class="estado bajopeso">"Tu índice de masa corporal indica que estás por debajo del peso saludable. Es importante
+        hablar con un médico para determinar las acciones adecuadas a seguir."</p>
+    <p class="estado pesonormal">"¡Felicidades! Tu índice de masa corporal se encuentra dentro del rango saludable.
+        Sigue manteniendo un estilo de vida activo y una alimentación balanceada."</p>
+    <p class="estado sobrepeso">"Tu índice de masa corporal indica que tienes sobrepeso. Considera ajustar tu dieta y
+        aumentar tu actividad física para mejorar tu salud."</p>
+    <p class="estado obesidad">"Tu índice de masa corporal indica que padeces de obesidad. Es importante tomar medidas
+        para reducir el riesgo de problemas de salud asociados. Consulta a un médico para recibir orientación."</p>
+    <p class="estado severa">"Tu índice de masa corporal indica que padeces de obesidad severa. Esto puede tener un
+        impacto significativo en tu salud. Busca ayuda médica para comenzar un plan de pérdida de peso bajo
+        supervisión."</p>
+    <p class="estado morbida">"Tu índice de masa corporal indica que padeces de obesidad mórbida. Esta es una condición grave que requiere atención médica urgente. Busca ayuda profesional para desarrollar un plan de tratamiento adecuado."</p>
+    <div>
+        <input type="range" min="60" max="250" value="160" id="altura" class="range" step="1">
+        <span id="altura-med"></span><span>cm</span>
+    </div>
+    <div>
+        <input type="range" min="1" max="200" value="60" id="peso" class="range" step="1">
+        <span id="peso-med"></span><span>Kg</span>
+    </div>
+</div>
+
+
+</body>
+</html>
