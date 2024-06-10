@@ -40,31 +40,21 @@ function calcularimc() {
 
 function calculo(resultado) {
     if (resultado < 18) {
-        detalles.style.color = 'white'
         cambiaClase('.bajopeso', 'darkblue')
         return `IMC :${resultado} Bajo Peso`
     } else if (resultado >= 18 && resultado <= 24) {
-        // 
         cambiaClase('.pesonormal', 'darkgreen')
         return `IMC :${resultado} Peso normal`
     } else if (resultado > 24 && resultado <= 29) {
-        // detalles.style.backgroundColor = 'darkorange'
-        detalles.style.color = 'black'
         cambiaClase('.sobrepeso', 'darkorange')
         return `IMC :${resultado} Padece sobrepeso `
     } else if (resultado > 29 && resultado <= 35) {
-        // detalles.style.backgroundColor = 'darkred'
-        detalles.style.color = 'black'
         cambiaClase('.obesidad', 'darkred')
         return `IMC :${resultado} Padece Obesidad `
     } else if (resultado > 35 && resultado <= 40) {
-        // detalles.style.backgroundColor = 'darkred'
-        detalles.style.color = 'black'
         cambiaClase('.severa', 'darkred')
         return `IMC :${resultado} Padece Obesidad Severa `
     } else if (resultado >= 40) {
-        // detalles.style.backgroundColor = 'darkred'
-        detalles.style.color = 'black'
         cambiaClase('.morbida', 'darkred')
         return `IMC :${resultado} Padece Obesidad morbida`
     }
